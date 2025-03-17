@@ -4,26 +4,26 @@ import Controller from '../controllers/controller';
 
 describe('All buttons should be visible', () => {
     beforeEach(() => {
-        LoginPage.visit();
+        LoginPage.visitPage();
     });
 
     it('socials buttons should be visible', () => {
-        Controller.isVisible(LoginPage.getSocialsLinks());
+        Controller.isVisible(LoginPage.socialsLinks());
     });
 
     it('navigation buttons should be visible', () => {
-        Controller.isVisible(LoginPage.getNavigationButtons());
+        Controller.isVisible(LoginPage.navigationButtons());
     });
 
     it('sign in buttons should be visible', () => {
-        Controller.isVisible(LoginPage.getSigninButtons());
+        Controller.isVisible(LoginPage.signinButtons());
     });
 
     it('sign up button should be visible', () => {
-        Controller.isVisible(LoginPage.getSignUpButton());
+        Controller.isVisible(LoginPage.signUpButton());
     });
 
     it('contact links should be visible', () => {
-        Controller.isVisible(LoginPage.getContacts());
+        Controller.isVisible(LoginPage.contacts());
     });
 });
