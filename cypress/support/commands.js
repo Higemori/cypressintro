@@ -36,3 +36,9 @@ Cypress.Commands.add('hasRedBorder', {
     cy.wrap(subject).should('have.css', 'border-color', 'rgb(220, 53, 69)');
   }
 });
+
+Cypress.Commands.add('isVisible', (items) => {
+  items.each(($item) => {
+    cy.wrap($item).should('be.visible');
+  })
+});

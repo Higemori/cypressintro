@@ -1,6 +1,4 @@
 import LoginPage from '../pages/LoginPage';
-import jsonData from '../env.json';
-import Controller from '../controllers/controller';
 
 describe('All buttons should be visible', () => {
     beforeEach(() => {
@@ -8,22 +6,22 @@ describe('All buttons should be visible', () => {
     });
 
     it('socials buttons should be visible', () => {
-        Controller.isVisible(LoginPage.socialsLinks());
+        cy.isVisible(LoginPage.socialsLinks);
     });
 
     it('navigation buttons should be visible', () => {
-        Controller.isVisible(LoginPage.navigationButtons());
+        cy.isVisible(LoginPage.navigationButtons);
     });
 
     it('sign in buttons should be visible', () => {
-        Controller.isVisible(LoginPage.signinButtons());
+        cy.isVisible(LoginPage.signInButtons);
     });
 
     it('sign up button should be visible', () => {
-        Controller.isVisible(LoginPage.signUpButton());
+        cy.isVisible(LoginPage.signUpButton);
     });
 
     it('contact links should be visible', () => {
-        Controller.isVisible(LoginPage.contacts());
+        cy.isVisible(LoginPage.contacts);
     });
 });
